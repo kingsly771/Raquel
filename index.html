@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bonne Année à ma petite princesse 🎆💖</title>
+
+<style>
+body{
+  font-family:Arial, sans-serif;
+  margin:0;color:#fff;
+  overflow-x:hidden;
+  background:radial-gradient(#0b0b1a,#000);
+}
+
+/* 🌟 Halo vivant */
+.page-glow{
+  position:fixed;inset:-40px;
+  background:radial-gradient(circle at 50% 10%,rgba(255,230,180,.25),transparent 55%),
+              radial-gradient(circle at 20% 80%,rgba(255,150,255,.18),transparent 50%),
+              radial-gradient(circle at 90% 60%,rgba(120,220,255,.18),transparent 55%);
+  filter:blur(18px);
+  pointer-events:none;
+  animation:pageGlow 8s ease-in-out infinite alternate;
+}
+@keyframes pageGlow{from{transform:scale(1);}to{transform:scale(1.08);}}
+
+/* 🌊 vague de lumière */
+.light-wave{
+  position:fixed;left:-40%;top:0;
+  width:80%;height:100%;
+  background:linear-gradient(115deg,transparent,rgba(255,200,255,.25),transparent);
+  filter:blur(18px);
+  pointer-events:none;
+  animation:waveMove 7s linear infinite;
+}
+@keyframes waveMove{from{transform:translateX(-40%) rotate(2deg);}to{transform:translateX(140%) rotate(-2deg);}}
+
+/* 🎆 Bandeau */
+.newyear{
+  text-align:center;padding:14px 10px;
+  font-size:20px;font-weight:900;
+  background:linear-gradient(135deg,#ffd86b,#ff9ad6);
+  color:#2a0a0a;box-shadow:0 0 22px rgba(255,180,120,.6);
+}
+
+.countdown{text-align:center;margin-top:4px;font-size:16px;opacity:.9;}
+h1{text-align:center;margin:18px 0;}
+.pride-text{text-align:center;font-size:18px;opacity:.9;}
+
+.marquee-box{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,200,255,.35);border-bottom:1px solid rgba(255,200,255,.35);padding:6px 0;margin:6px 0 10px;background:rgba(0,0,0,.35);}
+.marquee{display:inline-block;animation:marq 18s linear infinite;font-size:15px;}
+@keyframes marq{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+.toolbar{display:flex;justify-content:center;gap:8px;margin:10px 0;}
+.btn{padding:8px 14px;border-radius:20px;border:1px solid rgba(255,200,255,.45);background:rgba(0,0,0,.55);color:#ffdfff;font-weight:600;cursor:pointer;}
+
+.scroll-wrapper{height:260px;overflow:hidden;}
+.gallery{display:flex;gap:14px;padding:20px;width:max-content;}
+
+.card{width:210px;height:160px;perspective:900px;cursor:pointer;position:relative;}
+.inner{width:100%;height:100%;border-radius:18px;transform-style:preserve-3d;transition:.6s;box-shadow:0 0 18px rgba(255,170,255,.35);}
+.card.active .inner{transform:rotateY(180deg);}
+.face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border-radius:18px;backface-visibility:hidden;border:1px solid rgba(255,200,255,.35);}
+.front{background:rgba(0,0,0,.55);}
+.back{background:linear-gradient(135deg,#ffa6d9,#ffafd6);transform:rotateY(180deg);}
+
+/* 💌 Poème */
+.poem{
+  opacity:0;transform:translateY(40px);transition:.9s;
+  max-width:820px;margin:40px auto 60px;
+  padding:24px;border-radius:20px;
+  background:linear-gradient(135deg,#ffbadf,#ffd6ff);
+  color:#2a0a26;text-align:center;
+  box-shadow:0 0 28px rgba(255,200,255,.45);
+}
+.poem.show{opacity:1;transform:translateY(0)}
+
+.final-msg{
+  max-width:880px;margin:20px auto 120px;
+  border-radius:20px;background:linear-gradient(135deg,#1a1026,#261537);
+  border:1px solid rgba(255,200,255,.35);
+  box-shadow:0 0 26px rgba(255,180,255,.35);
+  overflow:hidden;transform-origin:top;
+  transform:scaleY(0);opacity:0;transition:1.3s ease-in-out;
+}
+.final-msg.show{transform:scaleY(1);opacity:1;}
+
+.letter-head{padding:12px;text-align:center;background:linear-gradient(135deg,#ffcf8b,#ffc2ff);color:#2a0a0a;font-weight:800;}
+.letter-body{padding:22px;text-align:center;font-size:18px;line-height:1.6;}
+
+.glow-heart{font-size:26px;display:inline-block;margin-top:10px;animation:pulse 2s infinite alternate;filter:drop-shadow(0 0 10px #ff8bd6);}
+@keyframes pulse{from{transform:scale(1);}to{transform:scale(1.25);}}
+
+.signature{margin-top:16px;font-size:20px;font-family:"Georgia",serif;color:#ffc8ff;text-shadow:0 0 10px rgba(255,200,255,.6);animation:signGlow 2.8s ease-in-out infinite alternate;opacity:.9;}
+@keyframes signGlow{from{opacity:.7;filter:drop-shadow(0 0 6px #ff9de6);}to{opacity:1;filter:drop-shadow(0 0 14px #ffffff);}}
+
+/* 🎇 feu */
+.fireBG{position:fixed;inset:0;pointer-events:none;}
+.fire{position:absolute;width:6px;height:6px;border-radius:50%;background:#ffd86b;box-shadow:0 0 10px gold;animation:boom 1.2s ease-out forwards;}
+@keyframes boom{to{transform:translate(var(--x),var(--y)) scale(0);opacity:0;}}
+</style>
+</head>
+
+<body>
+
+<div class="page-glow"></div>
+<div class="light-wave"></div>
+
+<div class="newyear">🎆 Bonne Année ma petite étoile — que cette nouvelle année soit douce et lumineuse ✨</div>
+<div class="countdown" id="count">Chargement des étoiles…</div>
+
+<h1>✨ Pour ma petite princesse ✨</h1>
+<div class="pride-text">Je suis fier de toi 🌟</div>
+
+<div class="marquee-box"><div class="marquee">🌟 Douceur — courage — lumière — confiance — espoir — rêves — avenir 🌟</div></div>
+
+<div class="toolbar">
+<button class="btn" id="musicBtn" onclick="toggleMusic()">🔈 Musique : OFF</button>
+</div>
+
+<audio id="music" src="https://github.com/kingsly771/Music./raw/refs/heads/main/HUNTR_X%20-%20Golden.mp3" preload="auto" playsinline></audio>
+
+<div class="scroll-wrapper">
+ <div class="gallery" id="gallery">
+  <div class="card" data-message="Que cette année t'apporte confiance et douceur 💕"><div class="inner"><div class="face front">🌸 Vœu 1</div><div class="face back"></div></div></div>
+  <div class="card" data-message="Que tes rêves continuent de grandir 🌟"><div class="inner"><div class="face front">💞 Vœu 2</div><div class="face back"></div></div></div>
+  <div class="card" data-message="Que ton sourire illumine chaque jour 💗"><div class="inner"><div class="face front">✨ Vœu 3</div><div class="face back"></div></div></div>
+  <div class="card last" data-message="Merci d’avoir parcouru cette surprise — un dernier cadeau arrive 💛"><div class="inner"><div class="face front">💌 Vœu final</div><div class="face back"></div></div></div>
+ </div>
+</div>
+
+<div class="poem" id="poem">
+ <h2>💌 Souhait pour la nouvelle année</h2>
+ <p>
+  Que cette nouvelle année t’apporte des moments doux,<br>
+  des rires sincères, des rêves lumineux,<br>
+  et la force de croire en ce que tu es déjà :<br><br>
+  une âme précieuse, courageuse et pleine de lumière.<br><br>
+  Continue de briller, d’avancer, de rêver…<br>
+  et n’oublie jamais :<br><br>
+  <b>tu seras toujours aimée — aujourd’hui, demain, et pour toujours 💖</b>
+ </p>
+</div>
+
+<div class="final-msg" id="finalMsg">
+  <div class="letter-head">📜 Message de fin d’année</div>
+  <div class="letter-body">
+    Cette nouvelle année commence avec un vœu doux pour toi :<br>
+    que ton cœur reste rempli d’espoir, de paix et de lumière.<br><br>
+    Peu importe le chemin, tu comptes énormément.<br>
+    Tu es précieuse. Tu es importante. Tu es aimée — toujours.<br><br>
+    <span class="glow-heart">💖</span>
+    <div class="signature">— Valenhart</div>
+  </div>
+</div>
+
+<div class="fireBG" id="fireBG"></div>
+
+<script>
+function magicSpark(x,y){
+  for(let i=0;i<10;i++){
+    const d=document.createElement("div");
+    d.style.position="fixed";d.style.left=x+"px";d.style.top=y+"px";
+    d.style.width="6px";d.style.height="6px";d.style.borderRadius="50%";
+    d.style.background=`hsl(${Math.random()*360} 90% 75%)`;
+    d.style.boxShadow="0 0 10px white";d.style.pointerEvents="none";
+    d.animate([{transform:"translate(-50%,-50%) scale(1)",opacity:1},
+      {transform:`translate(${Math.random()*140-70}px,${Math.random()*140-70}px) scale(0)`,opacity:0}],
+      {duration:900,easing:"ease-out",fill:"forwards"});
+    document.body.appendChild(d);setTimeout(()=>d.remove(),900);
+  }
+}
+window.addEventListener("pointerdown",e=>magicSpark(e.clientX,e.clientY));
+
+const music=document.getElementById("music");
+const musicBtn=document.getElementById("musicBtn");
+music.volume=.4;let on=false;
+function toggleMusic(){if(!on){music.currentTime=0;music.play().catch(()=>{});musicBtn.textContent="🎵 Musique : ON";on=true;}else{music.pause();musicBtn.textContent="🔈 Musique : OFF";on=false;}}
+
+const poem=document.getElementById("poem");
+const finalMsg=document.getElementById("finalMsg");
+
+document.querySelectorAll(".card").forEach(c=>{
+ c.querySelector(".back").textContent=c.dataset.message;
+ c.onclick=()=>{
+  c.classList.toggle("active");
+  if(c.classList.contains("last")){
+    setTimeout(()=>poem.classList.add("show"),600);
+    setTimeout(()=>finalMsg.classList.add("show"),1500);
+    bigFire();
+  }
+ };
+});
+
+const gallery=document.getElementById("gallery");
+let s=0;function autoScroll(){s+=0.6;gallery.style.transform=`translateX(-${s}px)`;if(s>gallery.scrollWidth-innerWidth)s=0;requestAnimationFrame(autoScroll);}autoScroll();
+
+const fireBG=document.getElementById("fireBG");
+function fire(x,y){for(let i=0;i<14;i++){const d=document.createElement("div");d.className="fire";d.style.left=x+"px";d.style.top=y+"px";d.style.setProperty("--x",(Math.random()*240-120)+"px");d.style.setProperty("--y",(Math.random()*240-120)+"px");d.style.background=`hsl(${Math.random()*360} 90% 70%)`;fireBG.appendChild(d);setTimeout(()=>d.remove(),1200);}}
+function bigFire(){fire(innerWidth/2,130);}
+setInterval(()=>fire(Math.random()*innerWidth,Math.random()*innerHeight*.6+40),1500);
+
+const count=document.getElementById("count");
+function update(){const t=new Date(new Date().getFullYear()+1,0,1);const d=t-new Date();if(d<=0){count.innerHTML="🎉 Bonne Année !!! 💖";return;}const h=Math.floor(d/3600000),m=Math.floor(d%3600000/60000),s=Math.floor(d%60000/1000);count.innerHTML=`🕛 Minuit dans <b>${h}h ${m}m ${s}s</b>`;}
+update();setInterval(update,1000);
+
+window.addEventListener("pointerdown",e=>fire(e.clientX,e.clientY));
+</script>
+
+</body>
+</html>
